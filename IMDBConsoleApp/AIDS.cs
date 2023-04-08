@@ -12,7 +12,7 @@ namespace IMDBConsoleApp
     public class AIDS
     {
 
-        private string connectionString = "Data Source=localhost;Initial Catalog=IMDB;User ID=IMDBUser;Password=1234";
+        
 
         public void Start()
         {
