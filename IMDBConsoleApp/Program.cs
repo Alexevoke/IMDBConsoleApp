@@ -1,6 +1,6 @@
 ﻿using IMDBConsoleApp;
 
-AIDS aIDS = new AIDS();
+IMDBUser aIDS = new IMDBUser();
 
 aIDS.Start();
 
