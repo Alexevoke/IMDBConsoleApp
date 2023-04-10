@@ -1,8 +1,8 @@
 ﻿using IMDBConsoleApp;
 
-IMDBUser aIDS = new IMDBUser();
+IMDBUser iMDBUser = new IMDBUser();
 
-aIDS.Start();
+iMDBUser.Start();
 
 Console.WriteLine("Press any key to exit this program...");
 Console.ReadKey();
