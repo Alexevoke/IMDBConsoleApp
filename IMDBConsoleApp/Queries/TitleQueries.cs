@@ -20,7 +20,7 @@ namespace IMDBConsoleApp.Queries
 
             Connection connection = new Connection();
 
-            string queryString = "SELECT tconst, titleType, primaryTitle, originalTitle, isAdult, startYear, endYear, " +
+            string queryString = "SELECT tconst, titleType_ID, primaryTitle, originalTitle, isAdult, startYear, endYear, " +
                 "runtimeMinutes FROM VW_titleBasics WHERE primaryTitle LIKE @search " +
                 "ORDER BY primaryTitle";
 
@@ -76,6 +76,17 @@ namespace IMDBConsoleApp.Queries
 
             return titles;
         }
+
+        private static void AddTitle(Title title)
+        {
+            Connection connection = new Connection();
+
+            string queryString = "INSERT INTO VW_titleBasics (tconst, primaryTitle, originalTitle, isAdult, " +
+                "startYear, endYear, runtimeMinutes, titleType_ID) " +
+                "VALUES (@tconst, @primaryTitle, @originalTitle, @isAdult, @startYear, @endYear, @runtimeMinutes, " +
+                "@titleType_ID)";
+
+        }
         private static Title ReadTitle(SqlDataReader reader)
         {
             Title title = new Title();
@@ -83,7 +94,7 @@ namespace IMDBConsoleApp.Queries
             if (!reader.IsDBNull(0))
                 title.Tconst = reader.GetString(0);
             if (!reader.IsDBNull(1))
-                title.TitleType = reader.GetString(1);
+                title.TitleType = (titleType)reader.GetInt32(1);
             if (!reader.IsDBNull(2))
                 title.PrimaryTitle = reader.GetString(2);
             if (!reader.IsDBNull(3))

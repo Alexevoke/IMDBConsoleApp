@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Dynamic;
 using System.Threading.Channels;
+using IMDBConsoleApp.IDGenerators;
 
 namespace IMDBConsoleApp
 {
@@ -44,33 +45,40 @@ namespace IMDBConsoleApp
             //}
             //Console.WriteLine(titles.Count);
 
-            Console.WriteLine("Indtast navnet på den person du vil finde: ");
-            string? search = Console.ReadLine();
+            //Console.WriteLine("Indtast navnet på den person du vil finde: ");
+            //string? search = Console.ReadLine();
 
-            Console.WriteLine("Search:");
-            List<Person> persons = NameQueries.PersonSearch(search);
+            //Console.WriteLine("Search:");
+            //List<Person> persons = NameQueries.PersonSearch(search);
 
-            foreach (Person person in persons)
-            {
-                Console.WriteLine("Name: " + person.PrimaryName);
-                Console.WriteLine("Birthyear: " + person.BirthYear);
-                Console.WriteLine("Deathyear: " + person.DeathYear);
-                Console.Write("Professions: ");
-                foreach (string profession in person.PrimaryProffesions)
-                {
-                    Console.Write(profession + " | ");
-                }
-                Console.WriteLine();
-                Console.Write("Known for titles: ");
-                foreach (string title in person.KnownForTitles)
-                {
-                    Console.Write(title + " | ");
-                }
-                Console.WriteLine();
-                Console.WriteLine();
+            //foreach (Person person in persons)
+            //{
+            //    Console.WriteLine("Name: " + person.PrimaryName);
+            //    Console.WriteLine("Birthyear: " + person.BirthYear);
+            //    Console.WriteLine("Deathyear: " + person.DeathYear);
+            //    Console.Write("Professions: ");
+            //    foreach (string profession in person.PrimaryProffesions)
+            //    {
+            //        Console.Write(profession + " | ");
+            //    }
+            //    Console.WriteLine();
+            //    Console.Write("Known for titles: ");
+            //    foreach (string title in person.KnownForTitles)
+            //    {
+            //        Console.Write(title + " | ");
+            //    }
+            //    Console.WriteLine();
+            //    Console.WriteLine();
 
-            }
-            Console.WriteLine(persons.Count);
+            //}
+            //Console.WriteLine(persons.Count);
+
+            //TconstGenerator generator = new TconstGenerator();
+
+            //string tconst = generator.GenerateTconst();
+            //Console.WriteLine(tconst);
+
+            
 
         }
 
