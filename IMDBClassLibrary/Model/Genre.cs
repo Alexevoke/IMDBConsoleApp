@@ -9,17 +9,17 @@ namespace IMDBClassLibrary.Model
     public class Genre
     {
 
-        public Genre() : this("meh", "meh") 
+        public Genre() : this(0, 0) 
         {
                  
         }
-        public Genre(string tconst, string? genretype)
+        public Genre(int id, GenreType genretype)
         {
-            Tconst = tconst;
+            Id = id;
             Genretype = genretype;
         }
 
-        public string Tconst { get; set; }
-        public string? Genretype { get; set; }
+        public int Id { get; set; }
+        public GenreType Genretype { get; set; }
     }
 }

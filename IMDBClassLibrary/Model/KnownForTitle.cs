@@ -8,18 +8,18 @@ namespace IMDBClassLibrary.Model
 {
     public class KnownForTitle
     {
-        public KnownForTitle() : this("meh", "meh")
+        public KnownForTitle() : this(0, "meh")
         {
 
         }
 
-        public KnownForTitle(string nconst, string title)
+        public KnownForTitle(int id, string title)
         {
-            Nconst = nconst;
+            Id = id;
             Title = title;
         }
 
-        public string Nconst { get; set; }
+        public int Id { get; set; }
         public string? Title { get; set; }
     }
 }

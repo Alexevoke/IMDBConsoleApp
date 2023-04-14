@@ -9,18 +9,18 @@ namespace IMDBClassLibrary.Model
     public class Profession
     {
         
-        public Profession() : this("meh", "meh") 
+        public Profession() : this(0, 0) 
         {
             
         }
         
-        public Profession(string nconst, string professionName)
+        public Profession(int id, Professions professionName)
         {
-            Nconst = nconst;
+            Id = id;
             ProfessionName = professionName;
         }
 
-        public string Nconst { get; set; }
-        public string ProfessionName { get; set; }
+        public int Id { get; set; }
+        public Professions ProfessionName { get; set; }
     }
 }
